@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Activities.SettlementDetailActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_toolbar_back" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/grossamountsettelmentdetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Gross Amount "
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGrossamountans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,15000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/viewone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/grossamountsettelmentdetails" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvplartformfees"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Platform fees "
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grossamountsettelmentdetails" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Anstvplartformfees"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,2000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/tvGrossamountans" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/transactionfess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Transaction Fees "
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvplartformfees" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/transactionfeesinfobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_info"
+                app:layout_constraintStart_toEndOf="@+id/transactionfess"
+                app:layout_constraintTop_toBottomOf="@+id/tvplartformfees" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Anstransactionfess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,2000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/Anstvplartformfees" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TVtax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Tax"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionfess" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/taxinfobutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_info"
+                app:layout_constraintStart_toEndOf="@+id/TVtax"
+                app:layout_constraintTop_toBottomOf="@+id/transactionfess" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvAnstax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,2000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/Anstransactionfess" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TVNetDeduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Net Deduction"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TVtax" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,2000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/TvAnstax" />
+
+
+            <View
+                android:id="@+id/viewtwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/TVNetDeduction" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvnetsettelment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Net Settelment"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewtwo" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/netsettlmentans"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Rs,2000"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/viewtwo" />
+
+            <View
+                android:id="@+id/viewNet"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/netsettlmentans" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/settlmentinfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Settelment Information"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewNet" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/netsettlmentinfoAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="jkfsklfgshekufgeskluhfuke"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/viewNet" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="settlmentinfo,netsettlmentinfoAns" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Dateofsettelment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Date Of Settelment"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrierone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/DateofsettelmentAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="19/03/2023"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/barrierone"
+                tools:layout_editor_absoluteY="358dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/UTRnumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="UTR Number"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dateofsettelment" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/UTRAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="238746487"
+                android:textColor="@color/grey_ppi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/DateofsettelmentAns" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UTRnumber">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/Settelmenttobank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Settelment To bank"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/settelmentBankname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Bank Name"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Settelmenttobank" />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelinetwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/banknameans"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Union Bank of India"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/guidelinetwo"
+                    app:layout_constraintTop_toBottomOf="@id/Settelmenttobank" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/settelmentAccountNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Account No"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settelmentBankname" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/settelmentaccountnoans"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="3984543985"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/guidelinetwo"
+                    app:layout_constraintTop_toBottomOf="@+id/banknameans" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ifsccodesettelment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="IFSC Code"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settelmentAccountNo" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/settelmentifsccode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="784359835984375984375"
+                    android:textColor="@color/grey_ppi"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/guidelinetwo"
+                    app:layout_constraintTop_toBottomOf="@+id/settelmentaccountnoans" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

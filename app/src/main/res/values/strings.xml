@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">DigiKhataMerchant</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mobile_number_required">Mobile Number *</string>
+    <string name="please_enter_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="please_enter_mobile_number">Please enter mobile number</string>
+    <string name="password">Password</string>
+    <string name="forgot_pin">Forgot PIN?</string>
+    <string name="welcome">Welcome,</string>
+    <string name="mobile_number_is_required">Mobile number is required *</string>
+    <string name="password_is_required">Password is required *</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_mobile_number_registered_with_paypoint">Enter mobile number registered with paypoint</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="old_password_is_required">Old password is required*</string>
+    <string name="old_password_not_match">Old password is not match</string>
+    <string name="new_password_is_required">New password is required*</string>
+    <string name="new_password_and_confirm_paasword_not_macth">New password and confirm password not match </string>
+    <string name="change_password">Change Password</string>
+    <string name="recent_transaction">Recent Transaction</string>
+    <string name="view_details"><u>View</u></string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="profile">Profile</string>
+    <string name="processed">Processed</string>
+    <string name="continues">Continues</string>
+    <string name="add_bank">Add Bank</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="select_account_type">Select Account Type</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="transaction_Details">Transaction Details</string>
+    <string name="settlement_Details">Settlement Details</string>
+    <string name="submit">Submit</string>
+    <string name="search">Search</string>
+    <string name="confirmation">Confirmation!</string>
+    <string name="notification">Notification</string>
+</resources>
+
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_fill0_wght400_grad0_opsz24"/>
+    <item
+        android:id="@+id/QRcode"
+        android:title="QR"
+        android:icon="@drawable/qr_code_scanner_fill0_wght400_grad0_opsz24"/>
+
+    <item
+        android:id="@+id/Transaction"
+        android:title=""
+        android:enabled="false"/>
+
+    <item
+        android:id="@+id/settelment"
+        android:title="Settelmet"
+        android:icon="@drawable/handshake_fill0_wght400_grad0_opsz24"/>
+    <item
+        android:id="@+id/Accounts"
+        android:title="Account"
+        android:icon="@drawable/person_fill0_wght400_grad0_opsz24"/>
+</menu>

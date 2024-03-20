@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/edittext_active_shape"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="₹ 100.00"
+        android:textColor="@color/black_ppi"
+        android:textSize="20dp"
+        android:id="@+id/tvAmount"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvAmount"
+        app:layout_constraintEnd_toStartOf="@id/ivNext"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/processed"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/black_ppi"
+        android:padding="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/edittext_active_shape"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvAmount"
+        app:layout_constraintEnd_toStartOf="@id/ivNext"
+        app:layout_constraintTop_toBottomOf="@+id/tvProcess"
+        android:text="13 march 2024"
+        android:textColor="@color/black_ppi"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:id="@+id/date"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

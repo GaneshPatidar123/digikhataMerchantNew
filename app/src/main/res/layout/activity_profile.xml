@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/background_dark"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/layout_toolbar_back"
+            android:id="@+id/toolBar"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Profilelayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/toolBar">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/main_blue"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/Imgprofilescreen"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/profileimage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/circularImageView" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Detailsconstraitprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/edittext_unactive_shape"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/Profilelayout">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelinelprofilescreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvProfilefirstname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/first_name"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvProfilefirstnameAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Viraj "
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toTopOf="@id/barrierone"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TvProfilefirstname"
+                tools:ignore="NotSibling" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvlastNameprofile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/last_name"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvlastNameprofileAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Roy"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@+id/TvlastNameprofile" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="TvProfilefirstnameAns,TvlastNameprofileAns" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContactNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Contact Number"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierone" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailidProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Email id"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@id/barrierone"
+                tools:layout_editor_absoluteY="81dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContactNumberAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="9082729560"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvContactNumber"
+                tools:ignore="NotSibling" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailidProfileAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="VirajRoy123@gmail.com"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailidProfile" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/BarrierTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvContactNumberAns,tvEmailidProfileAns" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvPINCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Email Id"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/BarrierTwo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="State"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@id/BarrierTwo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvPINCodeAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="sachin10@gmail.com"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TvPINCode"
+                tools:ignore="NotSibling" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvStateAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Maharashtra"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@id/TvState"
+                tools:ignore="NotSibling" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/BarrierThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="TvPINCodeAns,TvStateAns" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvCityprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="City"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/BarrierThree" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvCityprofileAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Mumbai"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TvCityprofile"
+                tools:ignore="NotSibling" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvAgentIDProfileScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Agent ID"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@id/BarrierThree" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvSatusleadingkartAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="8736387648764"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelinelprofilescreen"
+                app:layout_constraintTop_toBottomOf="@id/TvAgentIDProfileScreen"
+                tools:ignore="NotSibling" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/Barrierfour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="TvCityprofileAns,TvSatusleadingkartAns" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvBusinessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Business Name"
+                android:textColor="@color/black_ppi"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Barrierfour" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/TvBusinessNameAns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Grocery Shop"
+                android:textColor="@color/grey_ppi"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/guidelinelprofilescreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TvBusinessName" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Detailsconstraitprofile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

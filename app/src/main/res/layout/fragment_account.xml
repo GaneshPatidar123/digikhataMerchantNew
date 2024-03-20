@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_dark"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Accountscreenlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/main_blue"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/AccountHolderImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profileimage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circularImageView" />
+
+                <TextView
+                    android:id="@+id/TvNameNameaccountscreen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Viraj Roy"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/AccountHolderImg"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="VirajRoy123@gmail.com"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toEndOf="@+id/AccountHolderImg"
+                    app:layout_constraintTop_toBottomOf="@+id/TvNameNameaccountscreen" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accountscreenprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/backGround"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Accountscreenlayout">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/AccountscrrenQr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="My QR"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNextQr"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/viewQr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivNextQr" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileAccountscreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@+id/ivNext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewQr"
+            android:text="Profile" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNext"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewQr" />
+
+        <View
+            android:id="@+id/viewprofile"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileAccountscreen" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Accountscrrenchangepassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Change Password"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@+id/ivNextchangepassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewprofile" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNextchangepassword"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewprofile" />
+
+
+        <View
+            android:id="@+id/viewchangepassword"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/Accountscrrenchangepassword" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Accountscrrentermsanduses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Terms and conditions"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@+id/ivNexttermsandconditions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewchangepassword" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNexttermsandconditions"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewchangepassword" />
+
+
+        <View
+            android:id="@+id/viewTermsandconditions"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/Accountscrrentermsanduses" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/AccountscrrenAddbankaccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Add Bank account "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@+id/ivNextaddbankaccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTermsandconditions" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNextaddbankaccount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTermsandconditions" />
+
+
+        <View
+            android:id="@+id/viewaddbankaccount"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/AccountscrrenAddbankaccount" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/AccountscrrenNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Notification"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewaddbankaccount" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/ivNextNotification"
+            android:layout_width="55sp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:checked="true"
+            android:textSize="10dp"
+            android:thumb="@drawable/thumb_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewaddbankaccount"
+            app:showText="false"
+            app:track="@drawable/track_selector" />
+     <!--   <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNextNotification"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewaddbankaccount" />-->
+
+
+        <View
+            android:id="@+id/viewnotification"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/AccountscrrenNotification" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/AccountscrrenLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toStartOf="@+id/ivNextLogout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewnotification" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNextLogout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewnotification" />
+        <View
+            android:id="@+id/viewlogout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/ivNextLogout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
